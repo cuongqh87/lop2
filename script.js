@@ -21,6 +21,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const gdtcSample = document.getElementById('gdtc-sample');
     const tienganhContent = document.getElementById('tienganh-content');
     const tienganhSample = document.getElementById('tienganh-sample');
+    const congngheContent = document.getElementById('congnghe-content');
+    const congngheSample = document.getElementById('congnghe-sample');
+    const tinhocContent = document.getElementById('tinhoc-content');
+    const tinhocSample = document.getElementById('tinhoc-sample');
+    const khoahocContent = document.getElementById('khoahoc-content');
+    const khoahocSample = document.getElementById('khoahoc-sample');
+    const lsdlContent = document.getElementById('lsdl-content');
+    const lsdlSample = document.getElementById('lsdl-sample');
     const nlpcContent = document.getElementById('nlpc-content');
     const mauNxContent = document.getElementById('mau-nx-content');
 
@@ -43,6 +51,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const copyBangDiemBtnGDTC = document.getElementById('copy-bang-diem-gdtc-btn');
     const nhapNhanXetBtnTiengAnh = document.getElementById('nhap-nhan-xet-tienganh-btn');
     const copyBangDiemBtnTiengAnh = document.getElementById('copy-bang-diem-tienganh-btn');
+    const nhapNhanXetBtnCongNghe = document.getElementById('nhap-nhan-xet-congnghe-btn');
+    const copyBangDiemBtnCongNghe = document.getElementById('copy-bang-diem-congnghe-btn');
+    const nhapNhanXetBtnTinHoc = document.getElementById('nhap-nhan-xet-tinhoc-btn');
+    const copyBangDiemBtnTinHoc = document.getElementById('copy-bang-diem-tinhoc-btn');
+    const nhapNhanXetBtnKhoaHoc = document.getElementById('nhap-nhan-xet-khoahoc-btn');
+    const copyBangDiemBtnKhoaHoc = document.getElementById('copy-bang-diem-khoahoc-btn');
+    const nhapNhanXetBtnLsdl = document.getElementById('nhap-nhan-xet-lsdl-btn');
+    const copyBangDiemBtnLsdl = document.getElementById('copy-bang-diem-lsdl-btn');
     const copyBangDiemBtnNLPC = document.getElementById('copy-bang-diem-nlpc-btn');
     const nhapNlpcBtn = document.getElementById('nhap-nlpc-btn');
 
@@ -65,6 +81,14 @@ document.addEventListener('DOMContentLoaded', function() {
     const bangMauNhanXetGDTC = document.getElementById('bang-mau-nhan-xet-gdtc');
     const bangMonTiengAnh = document.getElementById('bang-mon-tienganh');
     const bangMauNhanXetTiengAnh = document.getElementById('bang-mau-nhan-xet-tienganh');
+    const bangMonCongNghe = document.getElementById('bang-mon-congnghe');
+    const bangMauNhanXetCongNghe = document.getElementById('bang-mau-nhan-xet-congnghe');
+    const bangMonTinHoc = document.getElementById('bang-mon-tinhoc');
+    const bangMauNhanXetTinHoc = document.getElementById('bang-mau-nhan-xet-tinhoc');
+    const bangMonKhoaHoc = document.getElementById('bang-mon-khoahoc');
+    const bangMauNhanXetKhoaHoc = document.getElementById('bang-mau-nhan-xet-khoahoc');
+    const bangMonLsdl = document.getElementById('bang-mon-lsdl');
+    const bangMauNhanXetLsdl = document.getElementById('bang-mau-nhan-xet-lsdl');
     const bangMonNLPC = document.getElementById('bang-mon-nlpc');
     const bangMauNxNlpc = document.getElementById('bang-mau-nx-nlpc');
 
@@ -96,6 +120,18 @@ document.addEventListener('DOMContentLoaded', function() {
     const exportTiengAnhMauBtn = document.getElementById('export-tienganh-mau-btn');
     const importTiengAnhMauBtn = document.getElementById('import-tienganh-mau-btn');
     const importTiengAnhMauInput = document.getElementById('import-tienganh-mau-input');
+    const exportCongNgheMauBtn = document.getElementById('export-congnghe-mau-btn');
+    const importCongNgheMauBtn = document.getElementById('import-congnghe-mau-btn');
+    const importCongNgheMauInput = document.getElementById('import-congnghe-mau-input');
+    const exportTinHocMauBtn = document.getElementById('export-tinhoc-mau-btn');
+    const importTinHocMauBtn = document.getElementById('import-tinhoc-mau-btn');
+    const importTinHocMauInput = document.getElementById('import-tinhoc-mau-input');
+    const exportKhoaHocMauBtn = document.getElementById('export-khoahoc-mau-btn');
+    const importKhoaHocMauBtn = document.getElementById('import-khoahoc-mau-btn');
+    const importKhoaHocMauInput = document.getElementById('import-khoahoc-mau-input');
+    const exportLsdlMauBtn = document.getElementById('export-lsdl-mau-btn');
+    const importLsdlMauBtn = document.getElementById('import-lsdl-mau-btn');
+    const importLsdlMauInput = document.getElementById('import-lsdl-mau-input');
     const exportMauNxBtn = document.getElementById('export-mau-nx-btn');
     const importMauNxBtn = document.getElementById('import-mau-nx-btn');
     const importMauNxInput = document.getElementById('import-mau-nx-input');
@@ -113,7 +149,8 @@ document.addEventListener('DOMContentLoaded', function() {
             tvContent, tvSample, toanContent, toanSample, tnxhContent, tnxhSample,
             hdtnContent, hdtnSample, daoducContent, daoducSample, amnhacContent, amnhacSample,
             mithuatContent, mithuatSample, gdtcContent, gdtcSample, tienganhContent, tienganhSample,
-            nlpcContent, mauNxContent
+            congngheContent, congngheSample, tinhocContent, tinhocSample, nlpcContent, mauNxContent,
+            khoahocContent, khoahocSample, lsdlContent, lsdlSample
         ];
         allContent.forEach(el => { if (el) el.style.display = 'none'; });
     }
@@ -130,6 +167,10 @@ document.addEventListener('DOMContentLoaded', function() {
             'Mĩ Thuật': [mithuatContent, mithuatSample],
             'GDTC': [gdtcContent, gdtcSample],
             'Tiếng Anh': [tienganhContent, tienganhSample],
+            'Môn Công nghệ': [congngheContent, congngheSample],
+            'Môn Tin học': [tinhocContent, tinhocSample],
+            'Môn Khoa học': [khoahocContent, khoahocSample],
+            'LS-ĐL': [lsdlContent, lsdlSample],
             'NL-PC': [nlpcContent],
             'Mẫu NX': [mauNxContent]
         };
@@ -138,9 +179,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (elementsToShow) {
             elementsToShow.forEach(el => {
                 if (el) {
-                    el.style.display = 'block'; // Or 'flex' if it's a flex container
-                    // Make buttons inside the active container visible
-                     el.querySelectorAll('.action-button').forEach(btn => {
+                    el.style.display = 'block';
+                    el.querySelectorAll('.action-button').forEach(btn => {
                         btn.style.display = 'inline-block';
                     });
                 }
@@ -153,16 +193,14 @@ document.addEventListener('DOMContentLoaded', function() {
         if (!tableBody) return;
         tableBody.querySelectorAll('tr').forEach(row => {
             const cells = row.querySelectorAll('td');
-            // Assuming score is in the 5th cell (index 4) and XL is in the 6th (index 5)
             if (cells.length > 5) {
                 const diemKTCell = cells[4];
                 const diemKTValue = parseFloat(diemKTCell.textContent.trim());
                 const xlCell = cells[5];
 
                 if (!isNaN(diemKTValue)) {
-                    if (diemKTValue >= 9) xlCell.textContent = 'T';
-                    else if (diemKTValue >= 7) xlCell.textContent = 'H';
-                    else if (diemKTValue >= 5) xlCell.textContent = 'Đ';
+                    if (diemKTValue >= 7) xlCell.textContent = 'T';
+                    else if (diemKTValue >= 5) xlCell.textContent = 'H';
                     else xlCell.textContent = 'C';
                 } else {
                     xlCell.textContent = '';
@@ -171,7 +209,6 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
-    // Generic function for score-based comments (Toán, Tiếng Anh)
     function buildScoreBasedLookup(sampleTableElement) {
         const lookup = {};
         const tableBody = sampleTableElement.querySelector('tbody');
@@ -182,7 +219,6 @@ document.addEventListener('DOMContentLoaded', function() {
             const cells = Array.from(row.querySelectorAll('td'));
             let commentCell = null;
     
-            // Find the key cell (with rowspan)
             const keyCell = cells.find(cell => cell.hasAttribute('rowspan'));
             if (keyCell) {
                 currentKey = keyCell.textContent.trim();
@@ -205,7 +241,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return lookup;
     }
 
-    // Generic function for classification-based comments (TNXH, Đạo đức, etc.)
     function buildClassificationBasedLookup(sampleTableElement) {
         const lookup = {};
         const tableBody = sampleTableElement.querySelector('tbody');
@@ -238,7 +273,6 @@ document.addEventListener('DOMContentLoaded', function() {
         return lookup;
     }
 
-    // Paste data into any table
     function handlePasteData(event, tableElement) {
         event.preventDefault();
         const clipboardData = event.clipboardData || window.clipboardData;
@@ -246,7 +280,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const tbody = tableElement.querySelector('tbody');
         if (!tbody) return;
         
-        tbody.innerHTML = ''; // Clear existing data
+        tbody.innerHTML = '';
         const rows = pastedData.split('\n').filter(row => row.trim() !== '');
         
         rows.forEach(rowText => {
@@ -260,13 +294,11 @@ document.addEventListener('DOMContentLoaded', function() {
             tbody.appendChild(tr);
         });
 
-        // After pasting, update the XL column if the table is for a graded subject
-        if (tableElement.id.includes('tv') || tableElement.id.includes('toan') || tableElement.id.includes('tienganh')) {
+        if (tableElement.id.includes('tv') || tableElement.id.includes('toan') || tableElement.id.includes('tienganh') || tableElement.id.includes('congnghe') || tableElement.id.includes('tinhoc') || tableElement.id.includes('khoahoc') || tableElement.id.includes('lsdl')) {
             updateXLColumn(tableElement);
         }
     }
     
-    // Copy data from a subject table
     function copySubjectTableData(tableElement) {
         const body = tableElement.querySelector('tbody');
         if (!body) return;
@@ -275,9 +307,8 @@ document.addEventListener('DOMContentLoaded', function() {
             const rowData = [];
             const cells = row.querySelectorAll('td');
             if (cells.length > 0) {
-                // Special handling to insert a blank column after the first column
                 rowData.push(cells[0].textContent.trim());
-                rowData.push(''); // Blank column
+                rowData.push('');
                 for (let i = 1; i < cells.length; i++) {
                     rowData.push(cells[i].textContent.trim());
                 }
@@ -290,7 +321,6 @@ document.addEventListener('DOMContentLoaded', function() {
             .catch(err => alert(`Lỗi khi sao chép: ${err}`));
     }
     
-    // Special copy function for NL-PC
     function copyAndCombineNlpcData(tableElement) {
         const body = tableElement.querySelector('tbody');
         if (!body || body.rows.length === 0) {
@@ -337,10 +367,9 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     
-    // --- EXCEL FUNCTIONS ---
     function exportToExcel(tableElement, fileName) {
         const rows = tableElement.querySelectorAll('tbody tr');
-        const dataForExport = [["Phân loại/Điểm số", "Nội dung"]]; // Header row
+        const dataForExport = [["Phân loại/Điểm số", "Nội dung"]];
 
         let tempKey = "";
         rows.forEach(row => {
@@ -403,7 +432,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error("Lỗi khi đọc file Excel:", error);
                 alert("Đã xảy ra lỗi khi đọc file. Vui lòng đảm bảo file có đúng định dạng.");
             } finally {
-                event.target.value = ''; // Reset input
+                event.target.value = '';
             }
         };
         reader.readAsArrayBuffer(file);
@@ -481,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 console.error("Lỗi khi đọc file Excel:", error);
                 alert("Đã xảy ra lỗi khi đọc file.");
             } finally {
-                event.target.value = ''; // Reset input
+                event.target.value = '';
             }
         };
         reader.readAsArrayBuffer(file);
@@ -498,7 +527,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
             if (!currentSubCat) return;
 
-            if (!lookup[currentSubCat]) { lookup[currentSubCat] = { T: [], H: [], C: [] }; }
+            if (!lookup[currentSubCat]) { lookup[currentSubCat] = { T: [], 'Đ': [], C: [] }; }
 
             const hasSubCatCell = row.cells[0].classList.contains('sub-category');
             const levelCell = hasSubCatCell ? row.cells[1] : row.cells[0];
@@ -509,11 +538,10 @@ document.addEventListener('DOMContentLoaded', function() {
             const comment = contentSpan ? contentSpan.textContent.trim() : '';
 
             if (levelText === 'Tốt') { lookup[currentSubCat]['T'].push(comment); }
-            else if (levelText === 'Đạt') { lookup[currentSubCat]['H'].push(comment); }
+            else if (levelText === 'Đạt') { lookup[currentSubCat]['Đ'].push(comment); }
             else if (levelText.includes('Chưa đạt')) { lookup[currentSubCat]['C'].push(comment); }
         });
         
-        for (const cat in lookup) { lookup[cat]['Đ'] = lookup[cat]['H']; }
         if(lookup['Giải quyết vấn đề và sáng tạo']) {
              lookup['GQVĐ và sáng tạo'] = lookup['Giải quyết vấn đề và sáng tạo'];
         }
@@ -523,7 +551,6 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- KHU VỰC NHẬP NHẬN XÉT ---
     if (nhapNhanXetBtnTV) {
         nhapNhanXetBtnTV.addEventListener('click', function() {
-            // 1. Build the lookup table from the sample comments
             const sampleComments = {};
             const sampleRows = document.querySelectorAll('#bang-mau-nhan-xet tbody tr');
             
@@ -557,7 +584,6 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             });
     
-            // 2. Iterate through student rows to apply comments
             const studentRows = document.querySelectorAll('#bang-mon-tv tbody tr');
             studentRows.forEach(row => {
                 const commentCell = row.cells[3];
@@ -576,7 +602,7 @@ document.addEventListener('DOMContentLoaded', function() {
                         if (sampleComments[cat] && sampleComments[cat][score] && sampleComments[cat][score].length > 0) {
                             const commentsForScore = sampleComments[cat][score];
                             const randomComment = commentsForScore[Math.floor(Math.random() * commentsForScore.length)];
-                            finalCommentParts.push(randomComment.replace(/\.$/, '')); // Remove trailing dot for joining
+                            finalCommentParts.push(randomComment.replace(/\.$/, ''));
                         }
                     });
                     
@@ -609,16 +635,19 @@ document.addEventListener('DOMContentLoaded', function() {
                         const scoreText = cells[4].textContent.trim();
                         const scoreValue = parseFloat(scoreText);
                         
-                        let lookupKey = scoreText;
-                        if (isNaN(scoreValue)) {
-                            lookupKey = scoreText; // Handle cases like "DƯỚI 5"
-                        } else if (scoreValue < 5) {
-                            lookupKey = "DƯỚI 5";
+                        let lookupKey = scoreText; 
+                        if (!isNaN(scoreValue)) {
+                            if (scoreValue < 5) {
+                                lookupKey = "DƯỚI 5";
+                            } else {
+                                lookupKey = Math.floor(scoreValue).toString();
+                            }
                         }
 
                         const possibleComments = commentLookup[lookupKey] || [];
                         if (possibleComments.length > 0) {
-                            cells[3].textContent = possibleComments[Math.floor(Math.random() * possibleComments.length)];
+                            const randomIndex = Math.floor(Math.random() * possibleComments.length);
+                            cells[3].textContent = possibleComments[randomIndex];
                         }
                     }
                 });
@@ -682,10 +711,10 @@ document.addEventListener('DOMContentLoaded', function() {
             if (!saveButton) {
                 saveButton = document.createElement('button');
                 saveButton.textContent = 'Lưu';
-                saveButton.classList.add('custom-save-btn'); // Add a class for styling
+                saveButton.classList.add('custom-save-btn');
                 td.appendChild(saveButton);
             }
-            this.disabled = true; // Disable edit button
+            this.disabled = true;
 
             saveButton.addEventListener('click', function saveHandler() {
                 contentSpan.textContent = inputField.value;
@@ -716,6 +745,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
+    // Gắn sự kiện paste
     if (bangMonTV) bangMonTV.addEventListener('paste', (e) => handlePasteData(e, bangMonTV));
     if (bangMonToan) bangMonToan.addEventListener('paste', (e) => handlePasteData(e, bangMonToan));
     if (bangMonTNXH) bangMonTNXH.addEventListener('paste', (e) => handlePasteData(e, bangMonTNXH));
@@ -725,8 +755,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (bangMonMiThuat) bangMonMiThuat.addEventListener('paste', (e) => handlePasteData(e, bangMonMiThuat));
     if (bangMonGDTC) bangMonGDTC.addEventListener('paste', (e) => handlePasteData(e, bangMonGDTC));
     if (bangMonTiengAnh) bangMonTiengAnh.addEventListener('paste', (e) => handlePasteData(e, bangMonTiengAnh));
+    if (bangMonCongNghe) bangMonCongNghe.addEventListener('paste', (e) => handlePasteData(e, bangMonCongNghe));
+    if (bangMonTinHoc) bangMonTinHoc.addEventListener('paste', (e) => handlePasteData(e, bangMonTinHoc));
+    if (bangMonKhoaHoc) bangMonKhoaHoc.addEventListener('paste', (e) => handlePasteData(e, bangMonKhoaHoc));
+    if (bangMonLsdl) bangMonLsdl.addEventListener('paste', (e) => handlePasteData(e, bangMonLsdl));
     if (bangMonNLPC) bangMonNLPC.addEventListener('paste', (e) => handlePasteData(e, bangMonNLPC));
     
+    // Gắn sự kiện sao chép
     if (copyBangDiemBtnTV) copyBangDiemBtnTV.addEventListener('click', () => copySubjectTableData(bangMonTV));
     if (copyBangDiemBtnToan) copyBangDiemBtnToan.addEventListener('click', () => copySubjectTableData(bangMonToan));
     if (copyBangDiemBtnTNXH) copyBangDiemBtnTNXH.addEventListener('click', () => copySubjectTableData(bangMonTNXH));
@@ -736,11 +771,19 @@ document.addEventListener('DOMContentLoaded', function() {
     if (copyBangDiemBtnMiThuat) copyBangDiemBtnMiThuat.addEventListener('click', () => copySubjectTableData(bangMonMiThuat));
     if (copyBangDiemBtnGDTC) copyBangDiemBtnGDTC.addEventListener('click', () => copySubjectTableData(bangMonGDTC));
     if (copyBangDiemBtnTiengAnh) copyBangDiemBtnTiengAnh.addEventListener('click', () => copySubjectTableData(bangMonTiengAnh));
+    if (copyBangDiemBtnCongNghe) copyBangDiemBtnCongNghe.addEventListener('click', () => copySubjectTableData(bangMonCongNghe));
+    if (copyBangDiemBtnTinHoc) copyBangDiemBtnTinHoc.addEventListener('click', () => copySubjectTableData(bangMonTinHoc));
+    if (copyBangDiemBtnKhoaHoc) copyBangDiemBtnKhoaHoc.addEventListener('click', () => copySubjectTableData(bangMonKhoaHoc));
+    if (copyBangDiemBtnLsdl) copyBangDiemBtnLsdl.addEventListener('click', () => copySubjectTableData(bangMonLsdl));
     if (copyBangDiemBtnNLPC) copyBangDiemBtnNLPC.addEventListener('click', () => copyAndCombineNlpcData(bangMonNLPC));
 
     // Gắn kết sự kiện Nhập nhận xét
     generateScoreBasedComment(nhapNhanXetBtnToan, bangMonToan, bangMauNhanXetToan);
     generateScoreBasedComment(nhapNhanXetBtnTiengAnh, bangMonTiengAnh, bangMauNhanXetTiengAnh);
+    generateScoreBasedComment(nhapNhanXetBtnCongNghe, bangMonCongNghe, bangMauNhanXetCongNghe);
+    generateScoreBasedComment(nhapNhanXetBtnTinHoc, bangMonTinHoc, bangMauNhanXetTinHoc);
+    generateScoreBasedComment(nhapNhanXetBtnKhoaHoc, bangMonKhoaHoc, bangMauNhanXetKhoaHoc);
+    generateScoreBasedComment(nhapNhanXetBtnLsdl, bangMonLsdl, bangMauNhanXetLsdl);
     
     generateClassificationComment(nhapNhanXetBtnTNXH, bangMonTNXH, bangMauNhanXetTNXH);
     generateClassificationComment(nhapNhanXetBtnHDTN, bangMonHDTN, bangMauNhanXetHDTN);
@@ -769,6 +812,7 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     }
 
+    // Gắn sự kiện Xuất/Nhập Excel
     if (exportTvMauBtn) exportTvMauBtn.addEventListener('click', () => exportToExcel(bangMauNhanXetTV, 'mau-nhan-xet-mon-tv.xlsx'));
     if (importTvMauBtn) importTvMauBtn.addEventListener('click', () => importTvMauInput.click());
     if (importTvMauInput) importTvMauInput.addEventListener('change', (e) => importFromExcel(e, bangMauNhanXetTV));
@@ -804,13 +848,28 @@ document.addEventListener('DOMContentLoaded', function() {
     if (exportTiengAnhMauBtn) exportTiengAnhMauBtn.addEventListener('click', () => exportToExcel(bangMauNhanXetTiengAnh, 'mau-nhan-xet-mon-tienganh.xlsx'));
     if (importTiengAnhMauBtn) importTiengAnhMauBtn.addEventListener('click', () => importTiengAnhMauInput.click());
     if (importTiengAnhMauInput) importTiengAnhMauInput.addEventListener('change', (e) => importFromExcel(e, bangMauNhanXetTiengAnh));
+
+    if (exportCongNgheMauBtn) exportCongNgheMauBtn.addEventListener('click', () => exportToExcel(bangMauNhanXetCongNghe, 'mau-nhan-xet-mon-congnghe.xlsx'));
+    if (importCongNgheMauBtn) importCongNgheMauBtn.addEventListener('click', () => importCongNgheMauInput.click());
+    if (importCongNgheMauInput) importCongNgheMauInput.addEventListener('change', (e) => importFromExcel(e, bangMauNhanXetCongNghe));
     
+    if (exportTinHocMauBtn) exportTinHocMauBtn.addEventListener('click', () => exportToExcel(bangMauNhanXetTinHoc, 'mau-nhan-xet-mon-tinhoc.xlsx'));
+    if (importTinHocMauBtn) importTinHocMauBtn.addEventListener('click', () => importTinHocMauInput.click());
+    if (importTinHocMauInput) importTinHocMauInput.addEventListener('change', (e) => importFromExcel(e, bangMauNhanXetTinHoc));
+
+    if (exportKhoaHocMauBtn) exportKhoaHocMauBtn.addEventListener('click', () => exportToExcel(bangMauNhanXetKhoaHoc, 'mau-nhan-xet-mon-khoahoc.xlsx'));
+    if (importKhoaHocMauBtn) importKhoaHocMauBtn.addEventListener('click', () => importKhoaHocMauInput.click());
+    if (importKhoaHocMauInput) importKhoaHocMauInput.addEventListener('change', (e) => importFromExcel(e, bangMauNhanXetKhoaHoc));
+
+    if (exportLsdlMauBtn) exportLsdlMauBtn.addEventListener('click', () => exportToExcel(bangMauNhanXetLsdl, 'mau-nhan-xet-mon-lsdl.xlsx'));
+    if (importLsdlMauBtn) importLsdlMauBtn.addEventListener('click', () => importLsdlMauInput.click());
+    if (importLsdlMauInput) importLsdlMauInput.addEventListener('change', (e) => importFromExcel(e, bangMauNhanXetLsdl));
+
     if (exportMauNxBtn) exportMauNxBtn.addEventListener('click', () => exportNlpcToExcel(bangMauNxNlpc, 'mau-nhan-xet-nlpc.xlsx'));
     if (importMauNxBtn) importMauNxBtn.addEventListener('click', () => importMauNxInput.click());
     if (importMauNxInput) importMauNxInput.addEventListener('change', (e) => importNlpcFromExcel(e, bangMauNxNlpc));
     
     // --- KHỞI TẠO TRẠNG THÁI BAN ĐẦU ---
-    // Hiển thị tab đầu tiên
     const activeLink = document.querySelector('.main-navigation a.active');
     if (activeLink) {
         showContentForSubject(activeLink.textContent.trim());
