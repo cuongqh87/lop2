@@ -15,6 +15,7 @@
     --info-color: #17a2b8;
     --info-hover: #138496;
     --light-gray: #f8f9fa;
+    --sample-bg-color: #f0f2f5; /* Màu nền mới cho bảng mẫu */
     --dark-gray: #343a40;
     --border-color: #dee2e6;
     --body-bg: #f4f7f6;
@@ -108,21 +109,28 @@ header {
 .table-container {
     display: flex;
     flex-wrap: wrap; 
-    gap: 20px;
+    gap: 30px; /* Khoảng cách ngang giữa các khối */
     margin-top: 20px;
 }
 
 .table-half, .table-full {
     flex-grow: 1;
     flex-shrink: 1;
-    background: var(--white);
+    background: var(--white); /* Nền trắng cho bảng điểm */
     padding: 25px;
     border-radius: var(--border-radius);
     box-shadow: var(--shadow);
     overflow-x: auto;
+    margin-bottom: 20px; /* THÊM: Đảm bảo khoảng cách dọc giữa các khối */
 }
+
+/* THAY ĐỔI: Nền đậm hơn cho bảng mẫu nhận xét */
+div[id$="-sample"] {
+    background-color: var(--sample-bg-color); /* Dùng màu nền mới đã định nghĩa */
+}
+
 .table-half {
-    flex-basis: calc(50% - 10px); 
+    flex-basis: calc(50% - 15px); /* Điều chỉnh lại flex-basis cho phù hợp với gap mới */
 }
 .table-full {
     flex-basis: 100%;
@@ -144,7 +152,7 @@ table th, table td {
 }
 
 table th {
-    background-color: var(--light-gray);
+    background-color: #e9ecef; /* Nền header của bảng đậm hơn một chút */
     font-weight: 700;
     color: var(--dark-gray);
     text-transform: uppercase;
@@ -161,10 +169,14 @@ table caption {
     border-bottom: 2px solid var(--primary-color);
 }
 
-.student-grade-table tbody tr:hover,
-.sample-comment-table tbody tr:hover {
-    background-color: #e9ecef;
+.student-grade-table tbody tr:hover {
+    background-color: #e2e6ea;
 }
+
+.sample-comment-table tbody tr:hover {
+    background-color: #dce1e6;
+}
+
 
 /* --- Buttons & Actions --- */
 .table-actions {
